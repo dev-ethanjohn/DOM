@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+
+    <title>Node Types</title>
+
+
+</head>
+
+<body>
+    <!-- Comment Node -->
+    <h1>This is an element node</h1>
+
+    <div>
+        <p>Hello</p>
+    </div>
+
+    This is a text Node
+
+    <!-- NOTE TYPES -->
+    <!-- COMMON ONES
+  (1) ELEMENT_NODE
+      An Element node like <p> or <div>
+  
+  (2) ATTRIBUTE_NODE
+      An Attribute node of an Element (id, class)
+  
+  (3) TEXT_NODE
+      A Text node inside an Element or Attribute
+
+  (8) COMMENT_NODE
+      A Comment node 
+  (9) DOCUMENT_NODE
+      A Document node (window.document)
+  (10) DOCUMENT_FRAGMENT_NODE
+      A DocumentFragment node
+   -->
+
+    <img src="/images/pototypechain.png" alt="Prototype chain">
+    <!--NOTE: Example
+     h1 -> $0 instanceof Element -> true
+           $0 instanceof HTMLElement ->  true
+           $0 instanceof Node -> true
+           $0 instanceof Document -> false
+           $0 instance of CharacterData -> false
+    
+    -->
+
+
+</body>
+
+</html>
