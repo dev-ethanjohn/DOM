@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+
+  <style>
+    img {
+      max-width: 70%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NOTE: notice on events attributes, we normall use `on` as a prefix of the name of the event -->
+  <button onclick="clickThis();" class="btn">Click Me</button>
+
+  <!-- NOTE: when it come sto event listener, we only have to use the event name -->
+
+
+  <p>Removing event listener</p>
+  <!-- This is useful for us to give enough space in memory by removing unused events or events that we no longer need. -->
+  <hr>
+
+  <img src="/images/remove-eventlistener.png" alt="">
+
+
+  <script>
+    function meow() {
+      console.log("meow");
+    }
+
+    function hello() {
+      console.log(
+        "hello"
+      );
+    }
+
+    function clickThis() {
+      meow();
+      hello();
+    }
+
+    function random() {
+      const rand = Math.random();
+      console.log(rand)
+    }
+
+    document.querySelector(".btn").addEventListener("click", random)
+
+
+
+
+
+  </script>
+</body>
+
+</html>
