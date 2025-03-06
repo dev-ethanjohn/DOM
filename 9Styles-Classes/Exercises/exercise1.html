@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Manipulation</title>
+  <style>
+    .large {
+      font-size: 48px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- /*
+    1. Create an HTML file with a <head> with a
+       <title> with some text. Add a <body> tag
+       with an <h1> tag inside with some text.
+
+    2. Add a <style> tag that will target elements
+       with a class of "large" that changes their
+       font-size to be 48px.
+
+    3. Open the file in your Browser and open up the
+       dev tools alongside it to run some code
+
+    4. What are a couple of ways to add and remove the
+       "large" class to/from the <h1> tag?
+
+    5. Make sure to test these in the console and
+       confirm the results visually and in the DOM
+*/ -->
+
+  <h1>Hello World</h1>
+
+  <!-- NOTE: METHOD 1 using classlist  -->
+  <!-- document.querySelector("h1").classList.add("large"); 
+  document.querySelector("h1").classList.remove("large"); -->
+
+
+  <!-- NOTE: METHOD 2 uisng toggle -->
+  <!-- document.querySelector("h1").classList.toggle("large"); // Adds if missing, removes if present -->
+
+
+  <!-- NOTE: METHDO 3 using setattribute -->
+  <!-- document.querySelector("h1").setAttribute("class", "large"); 
+  document.querySelector("h1").removeAttribute("class"); 
+
+</body>
+
+</html>

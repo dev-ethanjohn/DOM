@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Hello</h1>
+  <script>
+    const styleTag = document.createElement("style");
+    styleTag.textContent = ".large { font-size: 48px; }";
+    document.head.appendChild(styleTag);
+
+    document.querySelector("h1").classList.add("large");
+
+  </script>
+</body>
+
+</html>

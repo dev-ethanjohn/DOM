@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- /*
+    1. Create an HTML file with a <head> with a
+       <title> with some text. Add a <body> tag
+       with just a <script> tag inside it.
+
+    2. How would you, using ONLY Javscript code inside
+       the <script> tag:
+       - Add a <div> tag that has a background colour
+         of "salmon" that is centered horizontally on
+         the screen with a size of 200px by 200px
+
+    3. Open the file in your Browser and open up the
+       dev tools alongside it
+
+    4. Confirm the results visually and in the DOM
+*/ -->
+  <script>
+    const div = document.createElement("div");
+
+    div.style.width = "200px";
+    div.style.height = "200px";
+    div.style.backgroundColor = "salmon";
+    div.style.position = "absolute";
+    div.style.top = "50%";
+    div.style.left = "50%";
+    div.style.transform = "translate(-50%, -50%)";
+    document.body.appendChild(div);
+  </script>
+</body>
+
+</html>
