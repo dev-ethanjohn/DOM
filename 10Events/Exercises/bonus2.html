@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>Click me!</button>
+  <input type="text">
+  <!-- /*
+  What is the "this" Object inside an event
+  handler function?
+  */ -->
+
+
+  <script>
+    const button = document.querySelector("button");
+    button.onclick = function () {
+      console.log(this);
+    }
+
+    const input = document.querySelector("input");
+    input.oninput = function (event) {
+      console.log(this);
+    }
+
+  </script>
+</body>
+
+</html>

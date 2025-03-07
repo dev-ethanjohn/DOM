@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- /*
+    1. Create an HTML file with a <head> with a
+       <title> in it with some text, as well as
+       a <body> tag
+       
+    2. In the body, add a <button> Element with
+       the text "Play!" that when clicked, will 
+       generate a random number between 0-10. If
+       the number is greater than 7, it will display
+       a paragraph with the text "You're lucky!",
+       otherwise it will display a paragraph with the
+       text "Better luck next time!".
+
+    3. Open the file in your Browser and open up
+       the dev tools to verify the randomizing
+       behaviour when you click the button
+*/ -->
+  <button>Play!</button>
+  <p id="win" hidden>You're lucky!</p>
+  <p id="lose" hidden>Better luck next time!</p>
+
+  <!-- <script>
+    const playGame = () => {
+      const rand = Math.floor(Math.random() * 11);
+      const p = document.createElement("p");
+
+      p.textContent = rand > 7 ? "You're lucky!" : "Better luck next time!";
+      document.body.appendChild(p);
+    }
+
+    const button = document.querySelector("button");
+    button.addEventListener("click", playGame)
+  </script> -->
+
+  <script>
+    function playGame() {
+      const rand = Math.floor(Math.random() * 11);
+      console.log("Generated number:", rand);
+
+      const winMessage = document.getElementById("win");
+      const loseMessage = document.getElementById("lose");
+
+      winMessage.hidden = !(rand > 7);
+      loseMessage.hidden = (rand > 7);
+
+
+    }
+
+    const button = document.querySelector("button");
+    button.addEventListener("click", playGame)
+  </script>
+</body>
+
+</html>

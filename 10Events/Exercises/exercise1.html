@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- /*
+    1. Create an HTML file with a <head> with a
+       <title> in it with some text, as well as
+       a <body> tag
+       
+    2. In the body, add a <button> Element with
+       the text "Show Secret" that when the mouse is
+       moved over, will show/hide a paragraph element
+       with the text "A magical portal has opened!"
+       inside it
+
+    3. Open the file in your Browser and open up
+       the dev tools to verify the toggling
+       behaviour when you click the button
+*/ -->
+  <!-- <p class="textOpen" style="display: none;" hidden>A magical portal has opened!</p> -->
+  <p class="textOpen" hidden>A magical portal has opened!</p>
+  <button>Show Secret</button>
+
+  <script>
+    const paragraph = document.querySelector(".textOpen");
+    const button = document.querySelector("button");
+
+    button.addEventListener("mouseover", () => {
+      // paragraph.style.display = (paragraph.style.display === "none") ? "block" : "none";
+      paragraph.toggleAttribute("hidden");
+    });
+  </script>
+
+  <!-- NOTE: -->
+  <!-- Use hidden if you just need a simple toggle without animations or complex styling.
+  Use display: none; if you want to add animations or have more CSS control. -->
+
+
+</body>
+
+</html>
