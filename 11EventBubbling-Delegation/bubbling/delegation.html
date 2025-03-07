@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delegation</title>
+</head>
+
+<body>
+  <ul>
+    <li>home</li>
+    <li>blog</li>
+    <li>about</li>
+  </ul>
+  <!-- NOTE:  -->
+  <!-- Delegation -> delegate the tasks of managing events  -->
+  <script>
+    // const navs = document.querySelectorAll("li");
+    // navs.forEach((nav) => {
+    //   nav.addEventListener("click", function (e) {
+    //     // the target is the actual LI
+    //     console.log(e.target.textContent);
+    //   });
+    // });
+
+    // WITH DELEGATION
+    // we use the ancestor or a higher node lvl of such children.
+    // it does use a parent node or 1 place (closest common ancestor) per set of related children and attach a single event listener removing uncessary events
+    // atatching an event happens on the event bubbling phase
+    const ul = document.querySelector("ul");
+    ul.addEventListener("click", function (e) {
+      console.log(e.target.textContent);
+    });
+
+
+    // nOTE: Other event methods
+    // stopPropagation, preventDefault, composedPath
+
+  </script>
+</body>
+
+</html>
